@@ -1,6 +1,6 @@
 # Front End Web Developer Setup
 
-*11/10/2016*
+*1/4/2017*
 
 I'm Tania, a self-taught web developer who has been working professionally in the field since June, 2015. I also have a [blog of web development tutorials and articles](https://www.taniarascia.com/) I work on in my spare time. I'm going to write about the setup, programs, and plugins I use on a daily basis with some brief descriptions and alternate options. 
 
@@ -36,124 +36,7 @@ I used Windows exclusively from 1994 to 2015. Now I work on a Mac, currently run
 
 ### Configuration
 
-- Allow app installation: `Security and Privacy -> General -> Allow apps from identified developers`
-- Hide desktop icons
-
-```shell
-defaults write com.apple.finder CreateDesktop false
-```
-
-- Show hidden files
-
-```shell
-defaults write com.apple.finder AppleShowAllFiles YES
-```
-
-- Show path bar in finder
-
-```shell
-defaults write com.apple.finder ShowPathbar -bool true
-```
-
-### Installations
-
-#### Install XCode
-
-XCode is a suite of development tools and libraries from Apple. 
-
-1. Download [XCode](https://developer.apple.com/xcode/)
-
-#### Install Command Line Tools
-
-An additional package that other programs will depend on.
-
-```shell
-xcode-select --install
-```
-
-#### Install Homebrew
-
-[Homebrew](http://brew.sh/) is a package manager for macOS that makes it easy to install software.
-
-```shell
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-brew update
-```
-
-#### Install Git
-
-[Git](https://git-scm.com/) is a version control system for software development and collaboration.
-
-```shell
-brew install git
-git config --global user.name "Tania Rascia"
-git config --global user.email taniarascia@gmail.com
-```
-
-#### Install Node.js
-
-[Node.js](https://nodejs.org/en/) is used to run server-side JavaScript.
-
-```shell
-brew install node
-```
-
-#### Install Gulp
-
-[Gulp](http://gulpjs.com/) is a JavaScript task runner.
-
-```shell
-npm install --global gulp-cli
-```
-
-#### Install Vim
-
-[Vim](http://www.vim.org/) is a text editor that runs in the terminal.
-
-```shell
-git clone https://github.com/vim/vim.git
-cd vim/src
-make
-```
-
-### Dotfiles
-
-Extra configuration files.
-
-#### SSH
-
-Location: `~/.ssh/config`
-
-```shell
-Host example
-    HostName example.com
-    User example-user
-    IdentityFile key.pem
-```
-
-Command: `ssh example` will output `ssh -i key.pem example-user@example.com`.
-
-#### Git
-
-Location: `~/.gitconfig`
-
-```shell
-[alias]
-	c = commit -am
-	s = status
-	a = add
-	pom = push origin master
-	pog = push origin gh-pages
-	cob = checkout -b
- ```
- 
- Command: `git pom` will output `git push origin master`.
- 
-### Additional Programs
-
-- [Spectacle](https://www.spectacleapp.com/) - simplified window resizing.
-- [Sip](http://sipapp.io/) - collect the code for any color on your screen.
-- [GistBox](http://www.gistboxapp.com/) - organize code snippets.
+[Full list of my macOS configuration found here](https://github.com/taniarascia/mac)
 
 ## Browser
 
